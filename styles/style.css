@@ -243,7 +243,7 @@
   place-items: center;
 }
 
-.footer__text{
+.footer__text {
   text-shadow: 0.125rem 0.125rem 0 var(--accsent-shadow);
 }
 /*Конец. Работа со стилями подвала*/
