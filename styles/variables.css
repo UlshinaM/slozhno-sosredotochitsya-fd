@@ -2,3 +2,45 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  
+  --pink: #F1B2CE; /*Основной цвет текста в темной теме*/
+  --fucsia: #FF0070; /*Цвет заголовков секций, фонов подзаголовков h3 и тени букв и декоративных уголков в темной теме*/
+  --opacity-fucsia: #FF007066;
+  --bark-blue: #000028; /*Цвет подзаголовков секций и всего фона в темной теме*/
+  --purple: #DB00FF; /*Цвет главного заголовка в темной теме*/
+  --pastelle: #FFF1F7; /*Цвет всего фона в светлой теме*/
+  --dark-grey: #353430; /*Основной цвет текста, заголовков и подзаголовков и декоративных уголков в светлой теме*/
+  --opacity-dark-grey: #32312D66;
+  --light-pink: #FFC2E6; /*Цвет главного заголовка в светлой теме*/
+  --dark-pink: #FF8DCB; /*Цвет фонов подзаголовков h3 и тени букв в светлой теме*/
+  
+
+  --main-text-font: 'IBM Plex mono';
+  --main-text-font-size: 1.125rem; /*18px*/
+  --subtitles-font-size: 1.125rem; /*18px*/
+  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /*От 116px до 120px*/
+  --padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem); /*Боковые отступы. Изменяется от 10px для самого маленького мобильного до 20px для планшета и более широких экранов*/
+  --intersection-padding: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem); /*Отступы основного блока от шапки и подвала по вертикали от 40px для самого маленького мобильного до 60px для планшета и более широких экранов*/
+  --main-sections-gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem); /*Отступы между секциями от 50px для самого маленького мобильного до 80px для планшета и более широких экранов*/
+  --section-block-gap: 1.25rem; /*20px Отступ от заголовка до списка. Фиксированный*/
+  --main-list-item-gap: 1.25rem; /*Gap 20px между пунктами списков. Фиксированный*/
+  --main-list-item-content-gap: 0.625rem; /*10px Отступ от заголовка до параграфа внутри пунктов списка. Фиксированный*/
+  --main-text-color: var(--pink);/*DarkMode first*/
+  --title-color: var(--purple);
+  --section-title-color: var(--fucsia);
+  --header-theme-menu-color: var(--fucsia);
+  --button-hover: var(--opacity-fucsia);
+  --subtitle-color: var(--bark-blue);
+  --background-color: var(--bark-blue);
+  --background-image: url(../images/cover-image-dark.png);
+  --subtitle-background-color: var(--fucsia);
+  --accsent-shadow: var(--fucsia);
+}
+
+@media (width >= 768px) {
+  :root {
+    --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /*От 120px до 157px*/
+    --section-title-inline-size: calc((100% - var(--padding) * 2 - var(--section-block-gap)) / 3); /*Возможно, не понадобится, будет достаточно переопределения колонок в грид-контейнере*/
+  }
+}
