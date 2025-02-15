@@ -21,19 +21,6 @@
   --accsent-shadow: var(--dark-pink);
 }
 
-.theme-light .page {
-  --main-text-color: var(--dark-grey);
-  --title-color: var(--light-pink);
-  --section-title-color: var(--dark-grey);
-  --header-theme-menu-color: var(--dark-grey);
-  --button-hover: var(--opacity-dark-grey);
-  --subtitle-color: var(--dark-grey);
-  --background-color: var(--pastelle);
-  --background-image: url(../images/cover-image-light.png);
-  --subtitle-background-color: var(--dark-pink);
-  --accsent-shadow: var(--dark-pink);
-}
-
 .theme-light .page .header .header__dark-decor {
   display: none;
 }
@@ -41,7 +28,7 @@
 /*Добавляем медиазапрос для работы светлой темы, если она выбрана по умолчанию*/
 
 @media (prefers-color-scheme: light) {
-  :root.theme-auto .page {
+  :root {
     --main-text-color: var(--dark-grey);
     --title-color: var(--light-pink);
     --section-title-color: var(--dark-grey);

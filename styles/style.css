@@ -22,8 +22,7 @@
 
 /*Работа со стилями шапки*/
 
-.header,
-.footer {
+.decorated-zone {
   block-size: 100vh;
   display: grid;
   position: relative;
@@ -36,10 +35,8 @@
   grid-template-rows: 1fr min-content 1fr;
 }
 
-.header::after,
-.header::before,
-.footer::before,
-.footer::after {
+.decorated-zone::after,
+.decorated-zone::before {
   content: '';
   display:inline-block;
   inline-size: 1.5625rem;
@@ -47,16 +44,14 @@
   position: absolute;
 }
 
-.header::before,
-.footer::before {
+.decorated-zone::before {
   left: var(--padding);
   bottom: var(--padding);
   border-inline-start: 1px solid var(--header-theme-menu-color);
   border-block-end: 1px solid var(--header-theme-menu-color);
 }
 
-.header::after,
-.footer::after {
+.decorated-zone::after {
   right: var(--padding);
   top: var(--padding);
   border-inline-end: 1px solid var(--header-theme-menu-color);
@@ -219,15 +214,15 @@
 
 /*Отступы в блоке с картинками переопределены насильно, подумать по оформлению семантики этого блока*/
 
-.main__section_solutions-pictures {
+.main__section_pictures {
   gap: var(--main-list-item-content-gap);
 }
 
-.main__solutions-list-pictures {
+.main__list-pictures {
   gap: var(--main-list-item-content-gap);
 }
 
-.main__solutions-list-picture {
+.main__list-picture {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
@@ -287,25 +282,25 @@
     grid-column: 1 / -1;
   }
 
-  .main__section_solutions-pictures {
+  .main__section_pictures {
     grid-template-columns: 1fr;
     gap: var(--main-list-item-gap);
   }
 
-  .main__solutions-list-pictures {
+  .main__list-pictures {
     gap: var(--main-list-item-gap);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.83fr 1fr 1.38fr;
     grid-auto-flow: row dense;
   }
 
-  .main__solutions-list-item-sunset,
-  .main__solutions-list-item-street {
+  .main__list-item-sunset,
+  .main__list-item-street {
     grid-column: span 2;
   }
 
-  .main__solutions-list-item-ice-cream,
-  .main__solutions-list-item-tape {
+  .main__list-item-ice-cream,
+  .main__list-item-tape {
     grid-row: span 2;
   }
 }
@@ -340,11 +335,11 @@
   }
 
   .section__content,
-  .main__section_solutions-pictures {
+  .main__section_pictures {
     column-gap: 0;
   }
 
-  .main__section_solutions-pictures {
+  .main__section_pictures {
     grid-template-columns: 1fr;
     row-gap: var(--main-list-item-gap);
   }
