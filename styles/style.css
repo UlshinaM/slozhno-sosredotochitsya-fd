@@ -23,9 +23,13 @@
 /*Работа со стилями шапки*/
 
 .decorated-zone {
+  position: relative;
+}
+
+.header,
+.footer {
   block-size: 100vh;
   display: grid;
-  position: relative;
   padding: var(--padding);
   min-block-size: 668px;
 }
